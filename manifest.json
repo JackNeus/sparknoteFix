@@ -1,14 +1,19 @@
 {
 	"manifest_version": 2,
 
-	"name": "",
+	"name": "Sparknotes is for Studying!",
 	"description": "Removes distracting sidebars from Sparknotes",
 	"version": "1.0.0",
 
 	"content_scripts": [
 		{
-			
+			"matches": ["http://*.sparknotes.com/lit/*", "http://*.sparknotes.com/testprep/*"],
+			"js": ["script.js"]
 		}
+	],
+
+	"permissions": [
+		"activeTab"
 	]
 
 }
